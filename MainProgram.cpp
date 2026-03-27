@@ -1,4 +1,4 @@
-// ============================================================================
+/// ============================================================================
 //  LAB: Relational & Logical Operators, Conditional Statements
 //  Course: CMP1001 – Introduction to Programming (C++)
 //  Duration: 60 minutes
@@ -37,11 +37,15 @@ void section1_warmup() {
     // -----------------------------------------------------------------------
 
     // TODO: Declare two int variables (a and b)
-
+    // Type name assignment (=) value;
+    // Type name;
+    int a , b;
     // TODO: Prompt the user and read both values with cin
-
+    // cout << "message";
+    cout << "Enter two integers:";
+    // cin >> varible to put the value into;
     // TODO: Print "Sum = " followed by the result
-
+    cout << "Sumation" << a + b;
     cout << endl;
 
     // -----------------------------------------------------------------------
@@ -52,11 +56,13 @@ void section1_warmup() {
     // -----------------------------------------------------------------------
 
     // TODO: Declare a double variable for Celsius
-
-    // TODO: Prompt and read the value
-
-    // TODO: Calculate Fahrenheit and print it
-
+    double celsuis;
+     // TODO: Prompt and read the value
+     cout << "Enter temprature ın Celsuis";
+     cin >> celsuis;
+     // TODO: Calculate Fahrenheit and print it
+     double fahrenheit = celsuis * 9.0 / 5.0 + 32.0;
+     cout << celsuis << "c=" << fahrenheit << "f=";
     cout << endl;
 }
 
@@ -116,10 +122,17 @@ void section2_coreConcepts() {
     // -----------------------------------------------------------------------
 
     // TODO: Declare an int variable
-
+    int num;
     // TODO: Prompt and read it
-
+    cout << "Enter an integer:";
+    cin >> num;
     // TODO: Use if / else if / else to print the correct message
+    if (num > 0){
+        cout << "num ıs positive" << endl;
+    }else if (num < 0){
+        
+        
+    }
 
     cout << endl;
 
@@ -133,8 +146,18 @@ void section2_coreConcepts() {
     // -----------------------------------------------------------------------
 
     // TODO: Declare two ints, prompt, and read them
-
+    int x , y;
+    cout << "Enter two integers:";
+    cin >> x >>y ;
     // TODO: Write the if / else if / else chain
+    if (x == y){
+        cout << "Equal" << endl;
+    }else if (x > y){
+        cout << "First is bigger" << endl;
+    }else{
+        cout << "Second is bigger" << endl;    
+    }
+    
 
     cout << endl;
 }
@@ -155,24 +178,50 @@ void section3_guidedExercises() {
     // -----------------------------------------------------------------------
 
     // TODO: Implement the even/odd checker
+    int num;
+    cout << "Enter an integer";
+    cin >> num;
+    
+    if(num % 2 == 0){
+        cout << num << " is even." << endl;
+    }else{
+        cout << num << "is odd." << endl;
+    }
+    
 
     cout << endl;
 
     // -----------------------------------------------------------------------
     // Exercise 3.2 — Simple Grade Calculator
-    // Ask the user for a numeric score (0–100).
+    // Ask the user for a numeric score (0–100)
     // Print the letter grade using this scale:
-    //   90–100 → A
+     //   90–100 → A
     //   80–89  → B
     //   70–79  → C
     //   60–69  → D
     //   below 60 → F
     //
     // Also print "Invalid score" if the input is < 0 or > 100.
+    
     // -----------------------------------------------------------------------
 
     // TODO: Implement the grade calculator
-
+    int grade;
+    cout << "Enter an grade";
+    cin >> grade;
+    if (grade < 0 ||grade > 100){
+        cout << "İnvalıd Score";
+    }else if (grade >=90){
+        cout << "Grade: A" << endl;
+    }else if (grade >=80){
+        cout << "Grade: B" << endl;
+    }else if (grade >=70){
+        cout << "Grade: C" << endl; 
+    }else if (grade >=60){
+         cout << "Grade: D" << endl;
+    }else if (grade <60){
+         cout << "Grade: F" << endl;
+    }
     cout << endl;
 
     // -----------------------------------------------------------------------
@@ -187,6 +236,14 @@ void section3_guidedExercises() {
     // -----------------------------------------------------------------------
 
     // TODO: Implement the leap year checker
+    int year;
+    cout << "Enter an year";
+    cin >> year;
+    if ((year % 4 ==0 && year % 100 !=0) ||(year % 400 ==0)){
+        cout << year << "ıs a leap year." << endl;
+    }else{
+        cout << year << "ıs not a leap year." << endl;
+    }
 
     cout << endl;
 
@@ -207,6 +264,20 @@ void section3_guidedExercises() {
     // -----------------------------------------------------------------------
 
     // TODO: Implement the triangle validator and classifier
+    double s1 , s2 , s3;
+    cout << "Enter three sıde lengths:" << endl;
+    cin >> s1 >> s2 >> s3;
+    if (s1 + s2 > s3 && s1 + s3 > s2 && s2 + s3 >s1){
+        cout << "Valid triangle";
+        
+        if (s1 == s2 && s2 || s1 == s3 || s2 == s3){
+            cout << "Type : Equilateral" << endl;
+        }else if(){
+            cout << "Type: Scalene" << endl;
+        }else if(){
+            cout << "Not a valid triangle" << endl;,
+        }
+    }
 
     cout << endl;
 
@@ -237,7 +308,7 @@ void section3_guidedExercises() {
 //  Push yourself! These are a bit harder and more open-ended.
 // ============================================================================
 
-void section4_challenge() {
+
     cout << "=== SECTION 4: CHALLENGE ===" << endl;
 
     // -----------------------------------------------------------------------
@@ -283,7 +354,7 @@ void section4_challenge() {
 //  MAIN — calls each section in order
 // ============================================================================
 
-int main() {
+
     cout << "============================================" << endl;
     cout << "  CMP1001 Lab: Relational & Logical Ops    " << endl;
     cout << "  Conditional Statements                   " << endl;
